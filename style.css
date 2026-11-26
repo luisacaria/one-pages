@@ -1,0 +1,165 @@
+:root{--or:#F2531C;--cr:#F3EEDF;--bk:#15110E;--gr:#1E7A46;--pk:#F5BFCF;--bl:#16367A;--yl:#FFD23F}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',Arial,sans-serif;color:var(--bk);background:var(--cr);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.anton{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em}
+
+/* faixas de padrão */
+.strip{height:38px;background:conic-gradient(from 45deg at 50% 50%,var(--or) 25%,var(--pk) 0 50%,var(--gr) 0 75%,var(--bl) 0) 0 0/38px 38px}
+.strip.b{background:repeating-linear-gradient(90deg,var(--bl) 0 19px,var(--or) 0 38px)}
+.strip i{display:block;height:100%;background:radial-gradient(circle,var(--cr) 5px,transparent 5.5px) 0 0/38px 38px}
+
+/* topo / navegação */
+.top{background:var(--bk);color:var(--cr)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.top a{text-decoration:none;font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase}
+.top a:hover{color:var(--pk)}
+.top nav{display:flex;gap:20px}
+
+/* HOME */
+.home-head{text-align:center;padding:56px 0 36px}
+.home-head img{width:150px;margin:0 auto 18px}
+.home-head p{font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.blocks{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding-bottom:64px}
+.block{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:440px;border:3px solid var(--bk);border-radius:6px;overflow:hidden;text-decoration:none;color:var(--cr);transition:transform .2s,box-shadow .2s;box-shadow:6px 6px 0 var(--bk)}
+.block:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--bk)}
+.block .bg{position:absolute;inset:0;background-size:cover;background-position:center 30%}
+.block .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(21,17,14,.85))}
+.block .txt{position:relative;padding:24px}
+.block h2{font-size:52px;line-height:.95}
+.block p{font-weight:500;margin-top:8px;max-width:34ch}
+.block .go{display:inline-block;margin-top:16px;background:var(--or);color:var(--bk);font-weight:700;padding:8px 14px;border-radius:3px;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.block.bavi .bg{background:var(--bk)}
+.block.bavi .bg:before{content:"";position:absolute;inset:0;background:url(img/bavi-logo-light.png) center 14%/auto 46% no-repeat}
+.block.bavi .go{background:var(--pk)}
+
+/* PÁGINAS INTERNAS */
+.hero{height:min(56vw,460px);background:var(--bl) center 30%/cover;position:relative}
+.hero .logo{position:absolute;top:22px;left:24px;width:120px;background:var(--cr);padding:4px 8px;border-radius:3px}
+.title{background:var(--or);padding:30px 0 24px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+h1{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(48px,9vw,96px);line-height:.95;text-transform:uppercase;margin:8px 0}
+.anchor{font-size:20px;font-weight:700;line-height:1.3;max-width:40ch}
+
+.docs{background:var(--bk);padding:22px 0}
+.docs .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.docs b{color:var(--pk);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-right:8px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--cr);color:var(--bk);text-decoration:none;font-weight:700;padding:11px 18px;border-radius:3px;border:2px solid var(--cr);font-size:15px}
+.btn:hover{background:var(--yl);border-color:var(--yl)}
+.btn.or{background:var(--or);border-color:var(--or)}
+.btn.off{background:transparent;color:#9b948a;border-color:#4a443e;cursor:default}
+.btn.off:hover{background:transparent;border-color:#4a443e}
+.btn small{font-weight:500;font-size:12px;opacity:.75}
+
+.body{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;padding:44px 24px}
+p.main{font-size:18px;line-height:1.6;margin-bottom:28px}
+p.main b{background:var(--pk);padding:0 4px}
+h3{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:22px;letter-spacing:.08em;text-transform:uppercase;color:var(--or);border-bottom:3px solid var(--bk);padding-bottom:4px;margin-bottom:12px}
+ul{list-style:none}
+li{padding-left:18px;position:relative;margin-bottom:8px}
+li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;background:var(--or);transform:rotate(45deg)}
+.y{color:var(--or);font-weight:700}
+.side{display:flex;flex-direction:column;gap:18px}
+.photo{aspect-ratio:4/3;background:center 22%/cover;border:4px solid var(--bk)}
+.card{background:var(--gr);color:var(--cr);padding:18px 20px;border-radius:4px}
+.card h3{color:var(--pk);border-color:var(--cr)}
+.card li:before{background:var(--pk)}
+.card.bl{background:var(--bl)}.card.bk{background:var(--bk)}
+
+.askbar{background:var(--pk);border-top:3px solid var(--bk);border-bottom:3px solid var(--bk);padding:22px 0}
+.askbar .wrap{display:flex;gap:24px;align-items:center;font-size:18px}
+.askbar h3{margin:0;border:0;padding:0;color:var(--bk);font-size:34px;white-space:nowrap}
+
+.foot{background:var(--bk);color:var(--cr);padding:30px 0}
+.foot .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;font-size:15px}
+.foot b{color:var(--pk);font-size:12px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:4px}
+.foot a{text-decoration:underline;text-decoration-color:var(--or);text-underline-offset:3px}
+
+/* BAVI */
+.hero.bavi{background:var(--bk);display:flex;align-items:center;justify-content:center}
+.hero.bavi img{height:82%;width:auto}
+.hero.bavi:before,.hero.bavi:after{content:"";position:absolute;top:0;bottom:0;width:38px;background:repeating-linear-gradient(180deg,var(--bl) 0 19px,var(--or) 0 38px)}
+.hero.bavi:before{left:0}.hero.bavi:after{right:0}
+.title.bl{background:var(--bl);color:var(--cr)}
+.title.bl .anchor{color:var(--pk)}
+
+/* DOCUMENTOS */
+.doc{max-width:760px;margin:0 auto;padding:44px 24px 64px}
+.doc h1{font-size:clamp(40px,7vw,64px)}
+.doc h2{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:24px;letter-spacing:.08em;text-transform:uppercase;color:var(--or);border-bottom:3px solid var(--bk);padding-bottom:4px;margin:36px 0 14px}
+.doc ol{list-style:none;counter-reset:n}
+.doc ol li{counter-increment:n;padding:9px 0 9px 48px;border-bottom:1px solid #d8d0bc;margin:0}
+.doc ol li:before{content:counter(n,decimal-leading-zero);background:none;transform:none;width:auto;height:auto;top:9px;font-family:Anton,Impact,sans-serif;color:var(--or);font-size:18px}
+.doc ol li span{color:#6b6359}
+.doc dl{display:grid;grid-template-columns:max-content 1fr;gap:8px 20px}
+.doc dt{font-weight:700}
+.doc p{margin-bottom:12px}
+.note{background:#ffe27a;padding:10px 14px;border-radius:3px;font-size:15px;margin-top:24px}
+.back{display:inline-block;margin-bottom:20px;font-weight:700;text-decoration:none}
+.back:hover{color:var(--or)}
+.print{float:right}
+
+@media (max-width:760px){
+ .blocks,.body,.foot .wrap{grid-template-columns:1fr}
+ .block{min-height:340px}.block h2{font-size:42px}
+ .askbar .wrap{flex-direction:column;align-items:flex-start;gap:6px}
+ .top nav{gap:12px}.top a{font-size:12px}
+ .hero.bavi:before,.hero.bavi:after{width:19px}
+}
+@media print{.top,.docs,.print,.back{display:none}body{background:#fff}}
+
+/* BAVI · números e ofertas */
+.title .sub{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-top:14px;opacity:.85}
+.stats{background:var(--bk);color:var(--cr);padding:26px 0;border-top:3px solid var(--or)}
+.stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.stats b{display:block;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:46px;line-height:1;color:var(--or);text-transform:uppercase}
+.stats span{font-size:15px}
+.offer{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:0 24px 48px}
+.offer .card{padding:22px 24px}
+.offer .kick{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+.offer h4{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:30px;line-height:1.05;text-transform:uppercase;margin:4px 0 10px}
+.offer p{margin-bottom:12px}
+.offer ul{border-top:2px solid var(--cr);padding-top:10px}
+.askbar .asks{display:flex;flex-direction:column;gap:4px}
+@media (max-width:760px){.stats .wrap,.offer{grid-template-columns:1fr}.stats b{font-size:38px}}
+
+.tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:12px}
+.tags:last-child{margin-bottom:0}
+.tags b{width:100%;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--pk)}
+.tags span{border:2px solid var(--cr);border-radius:999px;padding:3px 12px;font-size:14px;font-weight:700}
+
+p.main.lg{font-size:clamp(20px,2.6vw,27px);line-height:1.45}
+.onda{grid-column:1/-1}
+.tagsgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.tagsgrid .tags{margin:0;align-content:flex-start}
+@media (max-width:900px){.tagsgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.tagsgrid{grid-template-columns:1fr}}
+
+/* Ensaio Tropical · hero com a marca */
+.hero.et{height:min(40vw,520px);background-position:center top}
+.hero.et .mark{position:absolute;right:26%;top:1.7vw;width:18%;height:auto}
+
+/* seletor de idioma */
+.top .lang{display:flex;gap:16px;margin-left:auto;padding-left:22px;border-left:1px solid #4a443e}
+.top .lang a{color:var(--pk)}
+.top .lang a:hover{color:var(--yl)}
+.top.home .lang{border:0;padding:0}
+@media (max-width:760px){.top .wrap{height:auto;padding-top:12px;padding-bottom:12px;flex-wrap:wrap;row-gap:8px}.top .lang{padding-left:0;border:0;margin-left:0;width:100%;justify-content:flex-end}.top.home .lang{width:auto;margin-left:auto}}
+
+/* Discografia · links Spotify */
+.disc a{text-decoration:underline;text-decoration-color:var(--pk);text-decoration-thickness:2px;text-underline-offset:3px}
+.disc a:hover{color:var(--yl);text-decoration-color:var(--yl)}
+.disc a:after{content:" ↗";font-size:.8em;color:var(--pk)}
+.offer .pitch{border-top:2px solid var(--cr);padding-top:12px;margin:0}
+.body ul a{text-decoration:underline;text-decoration-color:var(--or);text-underline-offset:3px}
+.btn.yl{background:var(--yl);border-color:var(--yl)}
+.btn.yl:hover{background:var(--cr);border-color:var(--cr)}
+
+/* Duo B.A.V.I. · título e logo em duas colunas */
+.title.split{padding:36px 0 32px}
+.title.split .wrap{display:grid;grid-template-columns:1.5fr 1fr;align-items:center;gap:32px}
+.title.split .tlogo{justify-self:center;width:auto;max-height:280px}
+@media (max-width:760px){.title.split .wrap{grid-template-columns:1fr;gap:18px}.title.split .tlogo{order:-1;max-height:180px}}
